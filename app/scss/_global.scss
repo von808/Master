@@ -6,7 +6,9 @@ body {
   font-weight: 400;
   font-size: 15px;
 }
-
+a {
+  display: inline-block;
+}
 .wrapper {
   display: flex;
   flex-direction: column;
