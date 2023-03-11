@@ -195,8 +195,25 @@
     }
   }
   &__video{
+    max-width: 630px;
+    width: 100%;
+    min-height: 362px;
+    margin: 0 auto 23px auto;
+    // background-image: url(../images/video-bg.jpg);
+    // background-repeat: no-repeat;
+    // background-position: center;
+    // background-size: cover;
+    // border-radius: 20px;
+    // position: relative;
+    background: linear-gradient(74deg, #627799 0%, rgba(58, 74, 99, 0.1) 98%);
+  }
+  .video-item{
+    max-width: 630px;
+    width: 100%;
     height: 362px;
-    margin: 0 0 23px 0;
+  }
+  &__buttons{
+    margin: 0 0 16px 0;
   }
   &__btn{
     padding: 30px 0;
@@ -224,6 +241,31 @@
       height: 14px;
       scale: 1.3;
     }
+    &::after{
+      content: '';
+      width: 311px; 
+      height: 91px;
+      border-radius: 60px;
+      border: 6px solid #FFD600;
+      position: absolute;
+      z-index: -1;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation: ring 1.8s infinite;
+    }
+    @keyframes ring {
+      0% {
+        width: 311px; 
+        height: 91px;
+        opacity: 1;
+      }
+      100% {
+        width: 340px;
+        height: 125px;
+        opacity: 0;
+      }
+    }
   }
   &__btn-master{
     font-size: 18px;
@@ -235,9 +277,39 @@
     border: 1px solid #BFBFBF;
     border-radius: 60px;
     transition: all .2s;
+    position: relative;
     &:hover{
-      background:#FFC11E;
+      background:#FFD600;
     }
+    & span{
+      font-size: 12px;
+      line-height: 19px;
+      color: #fff;
+      padding: 4px 9px;
+      background: linear-gradient(74deg, #627799 0%, #3A4A63 100%);
+      border-radius: 30px;
+      position: absolute;
+      top: -14px;
+      right: 0;
+    }
+  }
+}
+.online-point{
+  font-size: 14px;
+  line-height: 22px;
+  width: fit-content;
+  margin: 0 auto;
+  color: rgba(0, 0, 0, 0.6);
+  padding-left: 26px;
+  position: relative;
+  &::before{
+    position: absolute;
+    content: '';
+    background-image: url(../images/online-point.svg);
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
   }
 }
 .features{
@@ -245,7 +317,27 @@
   padding: 35px 0 30px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   display: flex;
-  justify-content: space-between
+  justify-content: space-between;
+  margin-bottom: 70px;
+  }
+  .feature{
+    max-width: 327px;
+    width: 100%;
+    display: flex;
+    &-icon{
+      padding-right: 19px;
+    }
+    &-title{
+      font-weight: 500;
+      font-size: 25px;
+      line-height: 39px;
+      color: #000
+    }
+    &-subtitle{
+      font-size: 15px;
+      line-height: 19px;
+      color: rgba(0, 0, 0, 0.6);
+    }
   }
 }
 
