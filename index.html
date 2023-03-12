@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CDNSFree2/Plyr/plyr.css" />
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -137,10 +138,36 @@
                   Мастер прибудет <span>через 15 – 30 минут, без повреждения</span> двери произведет вскрытие, доступно 24 часа в сутки
                 </div>
                 <div class="emergency-opening__video">
-                  <video class="video-item" poster="images/video-bg.jpg" id="player" playsinline controls>
-                    <source src="video/Me at the zoo.mp4" type="video/mp4" />
-                    <source src="/path/to/video.webm" type="video/webm" />
-                </video>
+                  <div class="video__inner">
+                    <div>
+                      <a class="video-btn" id="popup-open" href="#">
+                        <img src="images/btn-play.png" alt="play">
+                      </a>
+                    </div>
+                    <div class="video-popup" id="video-popup">
+                      <div class="video-popup__container">
+                        <div class="video-popup__body" id="video-popup__body">
+                          <div class="popup-close" id="popup-close">
+                            Закрыть видео
+                          </div>
+                          <!-- data-poster="images/video-bg.jpg" -->
+                          <div class="video" id="container">
+                            <video controls class="vid1">
+                              <source src="video/Me at the zoo.mp4" type="video/mp4"/>
+                            </video>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="video-text">
+                      <div class="video-title">
+                        <span>Посмотрите</span> 
+                        <span>короткий трейлер</span>
+                      </div>
+                      <div class="video-subtitle">И узнайте за 1,5 минуты как мы работаем</div>
+                    </div>
+                  </div>
+                  
                 </div>
                 <div class="emergency-opening__buttons">
                     <a class="emergency-opening__btn emergency-opening__btn-phone" href="tel:83432264403">8(343)226-44-03</a>
@@ -206,6 +233,7 @@
 
         </footer>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.6.7/plyr.min.js"></script>
     <script src="js/main.min.js"></script>
 </body>
 </html>
