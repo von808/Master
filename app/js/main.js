@@ -1,6 +1,12 @@
 $(function () {
 
-
+  $('.page-menu__list').slick({
+    arrows: false,
+    dots: false,
+    slidesToShow: auto,
+    slidesToScroll: auto,
+    infinite: false,
+});
 
 })
 
