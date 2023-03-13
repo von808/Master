@@ -4,6 +4,7 @@ $(function () {
 
 })
 
+
 const openPopUp = document.getElementById('popup-open');
 const closePopUp = document.getElementById('popup-close');
 const popUp = document.getElementById('video-popup');
@@ -37,6 +38,4 @@ var controls =
     // 'download', // Show a download button with a link to either the current source or a custom URL you specify in your options
     'fullscreen' // Toggle fullscreen
   ];
-
-
   const player = new Plyr('.vid1',{controls});

@@ -23,7 +23,7 @@ function styles() {
 function scripts() {
   return src([
     'node_modules/jquery/dist/jquery.js',
-    'node_modules/plyr/dist/plyr.js',
+    // 'node_modules/plyr/dist/plyr.js',
     'app/js/main.js'
   ])
     .pipe(concat('main.min.js'))
@@ -72,6 +72,7 @@ function building() {
   return src([
     'app/css/style.min.css',
     'app/fonts/**/*',
+    'app/video/**/*',
     'app/js/main.min.js',
     'app/*.html'
   ], { base: 'app' })
