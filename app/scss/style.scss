@@ -169,16 +169,32 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
     height: 64px;
+    margin: 0 -15px;
+    overflow-x: auto;
+    &::-webkit-scrollbar{
+      display: none;
+    }
+    padding: 1em;
+    background: linear-gradient(90deg,#fff 33%,rgba(255,255,255,0)),
+                linear-gradient(90deg,rgba(255,255,255,0),#fff 66%) 0 100%,
+                radial-gradient(farthest-side at 0 50%,rgba(150,150,150,.8),transparent),
+                radial-gradient(farthest-side at 100% 50%,rgba(150,150,150,.8),transparent) 0 100%;
+    background-repeat: no-repeat;
+    background-size: 30px 100%,30px 100%,10px 100%,10px 100%;
+    background-position: 0 0,100%,0 0,100%;
+    background-attachment: local,local,scroll,scroll;
   }
   &__list-item{
     font-size: 15px;
     line-height: 23px;
+    min-width: fit-content;
   }
   &__list-item--link{
     color: rgba(0, 0, 0, 0.6);
     display: inline-block;
-    padding: 20px 0;
+    padding: 15px 0;
   }
   &__link-active{
     border-bottom: 2px solid rgba(0, 0, 0, 0.35);
