@@ -20,6 +20,12 @@
   }
 }
 @media (max-width: 719px){
+  .nav__menu{
+    display: none;
+  }
+  .hamburger-menu{
+    display: block;
+  }
   .user{
     display: none;
   }
